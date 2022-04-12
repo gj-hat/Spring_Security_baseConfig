@@ -1,0 +1,2 @@
+# 基础款
+仅仅使用了SpringSecurity没有用到Redis和权限校验

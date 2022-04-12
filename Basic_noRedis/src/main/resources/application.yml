@@ -1,0 +1,11 @@
+
+# mysql数据源
+# Path: src/main/resources/application-mysql.yml
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testMysql?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 321321321
+
+
