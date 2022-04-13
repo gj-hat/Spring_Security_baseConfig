@@ -21,7 +21,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_16">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_18">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -43,12 +43,12 @@
     <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.36" level="project" />
     <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:2.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.30" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-aop:6.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-beans:6.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:6.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-context:6.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:6.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-expression:6.0.0-M3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:6.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-beans:6.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:6.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:6.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:6.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-expression:6.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:3.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:3.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2" level="project" />
@@ -58,15 +58,15 @@
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:10.0.18" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:10.0.18" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:10.0.18" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-web:6.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:6.0.0-M3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-web:6.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:6.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-redis:3.0.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-redis:3.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-keyvalue:3.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:3.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-tx:6.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-oxm:6.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:6.0.0-M3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-redis:3.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-keyvalue:3.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:3.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:6.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-oxm:6.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:6.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.36" level="project" />
     <orderEntry type="library" name="Maven: io.lettuce:lettuce-core:6.1.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.75.Final" level="project" />
@@ -88,7 +88,7 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:3.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:3.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:5.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:6.0.0-M3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:6.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.55" level="project" />
     <orderEntry type="library" name="Maven: io.jsonwebtoken:jjwt:0.9.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.2" level="project" />
@@ -122,13 +122,13 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-junit-jupiter:4.4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.skyscreamer:jsonassert:1.5.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-core:6.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-jcl:6.0.0-M3" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:6.0.0-M3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-core:6.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jcl:6.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:6.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.9.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.springframework.security:spring-security-test:6.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:6.0.0-M3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:6.0.0-M3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework.security:spring-security-test:6.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:6.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:6.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.3.0" level="project" />
     <orderEntry type="library" name="Maven: com.sun.xml.bind:jaxb-impl:2.3.0" level="project" />
     <orderEntry type="library" name="Maven: com.sun.xml.bind:jaxb-core:2.3.0" level="project" />

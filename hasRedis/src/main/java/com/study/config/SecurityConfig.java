@@ -37,6 +37,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private AccessDeniedHandlerImpl accessDeniedHandler;
 
 
+
+
     @Bean
     /**
      * SpringSecurity默认自动使用BCryptPasswordEncoder对密码进行加密，
@@ -51,7 +53,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         // 登录页面放行 不拦截
         http
-                // 关闭csrf防护
+                // 关闭csrf防护     csrf是一个攻击  可以去百度了解
                 .csrf().disable()
                 // 不通过Sesdsion获取SecurityContext
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -59,6 +61,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 // 对于登录接口 允许匿名访问   只有匿名时候才可以访问 /user/login
                 .antMatchers("/user/login").anonymous()
+                // 基于配置类的权限控制
+                .antMatchers("/hello3").hasAuthority("system:dept:list")
                 // 除上面外的所有请求去不需要鉴权认证
                 .anyRequest().authenticated();
 
