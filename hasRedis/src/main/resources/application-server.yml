@@ -1,0 +1,19 @@
+# mysql数据源
+# Path: src/main/resources/application-mysql.yml
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://gxsweb.top:3306/test_spring_security?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: guojia-server
+    password: 321321
+  redis:
+    port: 6379
+    host: gxsweb.top
+    password: 321321
+
+server:
+  port: 8080
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+
+

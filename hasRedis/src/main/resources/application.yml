@@ -2,4 +2,4 @@
 # Path: src/main/resources/application-mysql.yml
 spring:
   profiles:
-    active: mac14
+    active: server

@@ -14,7 +14,7 @@
  Date: 14/04/2022 16:19:12
 */
 
-SET NAMES utf8mb4;
+SET NAMES utf8;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
@@ -37,7 +37,7 @@ CREATE TABLE `sys_menu` (
   `del_flag` int DEFAULT '0' COMMENT '是否删除（0未删除 1已删除）',
   `remark` varchar(500) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='菜单表';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci COMMENT='菜单表';
 
 -- ----------------------------
 -- Records of sys_menu
@@ -63,7 +63,7 @@ CREATE TABLE `sys_role` (
   `update_time` datetime DEFAULT NULL,
   `remark` varchar(500) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='角色表';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci COMMENT='角色表';
 
 -- ----------------------------
 -- Records of sys_role
@@ -81,7 +81,7 @@ CREATE TABLE `sys_role_menu` (
   `role_id` bigint NOT NULL AUTO_INCREMENT COMMENT '角色ID',
   `menu_id` bigint NOT NULL DEFAULT '0' COMMENT '菜单id',
   PRIMARY KEY (`role_id`,`menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- ----------------------------
 -- Records of sys_role_menu
@@ -99,7 +99,7 @@ CREATE TABLE `sys_user` (
   `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键',
   `user_name` varchar(64) NOT NULL DEFAULT 'NULL' COMMENT '用户名',
   `nick_name` varchar(64) NOT NULL DEFAULT 'NULL' COMMENT '昵称',
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'NULL' COMMENT '密码',
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT 'NULL' COMMENT '密码',
   `status` char(1) DEFAULT '0' COMMENT '账号状态（0正常 1停用）',
   `email` varchar(64) DEFAULT NULL COMMENT '邮箱',
   `phonenumber` varchar(32) DEFAULT NULL COMMENT '手机号',
@@ -112,7 +112,7 @@ CREATE TABLE `sys_user` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `del_flag` int DEFAULT '0' COMMENT '删除标志（0代表未删除，1代表已删除）',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='用户表';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci COMMENT='用户表';
 
 -- ----------------------------
 -- Records of sys_user
@@ -130,7 +130,7 @@ CREATE TABLE `sys_user_role` (
   `user_id` bigint NOT NULL AUTO_INCREMENT COMMENT '用户id',
   `role_id` bigint NOT NULL DEFAULT '0' COMMENT '角色id',
   PRIMARY KEY (`user_id`,`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- ----------------------------
 -- Records of sys_user_role
