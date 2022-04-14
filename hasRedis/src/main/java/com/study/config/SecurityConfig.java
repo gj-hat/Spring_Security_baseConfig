@@ -17,11 +17,11 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 /**
  * @author ：JiaGuo
- * @emil ：1520047927@qq.com
- * @date ：Created in 2022/4/8 14:17
- * @description：密码验证 配置类
- * @modified By：
- * @version: 1.0
+ * {@code @emil} ：1520047927@qq.com
+ * {@code @date} ：Created in 2022/4/8 14:17
+ * {@code @description：密码验证} 配置类
+ * {@code @modified} By：
+ * {@code @version:} 1.0
  */
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -40,8 +40,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
     @Bean
-    /**
-     * SpringSecurity默认自动使用BCryptPasswordEncoder对密码进行加密，
+    /*
+      SpringSecurity默认自动使用BCryptPasswordEncoder对密码进行加密，
      */
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -55,7 +55,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 // 关闭csrf防护     csrf是一个攻击  可以去百度了解
                 .csrf().disable()
-                // 不通过Sesdsion获取SecurityContext
+                // 不通过Session获取SecurityContext
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
@@ -63,7 +63,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/user/login").anonymous()
                 // 基于配置类的权限控制
                 .antMatchers("/hello3").hasAuthority("system:dept:list")
-                // 除上面外的所有请求去不需要鉴权认证
+                //  其他接口需要认证
                 .anyRequest().authenticated();
 
 

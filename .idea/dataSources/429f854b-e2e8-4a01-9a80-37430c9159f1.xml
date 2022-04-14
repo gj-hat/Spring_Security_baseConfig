@@ -1,57 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="test_spring_security@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.38">
-    <root id="1">
-      <DefaultCasing>mixed/mixed</DefaultCasing>
-      <DefaultEngine>InnoDB</DefaultEngine>
-      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>|root||root|&apos;&apos;|ALTER|G
-|root||root|&apos;&apos;|ALTER ROUTINE|G
-|root||mysql.session|localhost|BACKUP_ADMIN|G
-|root||mysql.session|localhost|CLONE_ADMIN|G
-|root||mysql.session|localhost|CONNECTION_ADMIN|G
-|root||root|&apos;&apos;|CREATE|G
-|root||root|&apos;&apos;|CREATE ROLE|G
-|root||root|&apos;&apos;|CREATE ROUTINE|G
-|root||root|&apos;&apos;|CREATE TABLESPACE|G
-|root||root|&apos;&apos;|CREATE TEMPORARY TABLES|G
-|root||root|&apos;&apos;|CREATE USER|G
-|root||root|&apos;&apos;|CREATE VIEW|G
-|root||root|&apos;&apos;|DELETE|G
-|root||root|&apos;&apos;|DROP|G
-|root||root|&apos;&apos;|DROP ROLE|G
-|root||root|&apos;&apos;|EVENT|G
-|root||root|&apos;&apos;|EXECUTE|G
-|root||root|&apos;&apos;|FILE|G
-|root||root|&apos;&apos;|INDEX|G
-|root||root|&apos;&apos;|INSERT|G
-|root||root|&apos;&apos;|LOCK TABLES|G
-|root||mysql.session|localhost|PERSIST_RO_VARIABLES_ADMIN|G
-|root||root|&apos;&apos;|PROCESS|G
-|root||root|&apos;&apos;|REFERENCES|G
-|root||root|&apos;&apos;|RELOAD|G
-|root||root|&apos;&apos;|REPLICATION CLIENT|G
-|root||root|&apos;&apos;|REPLICATION SLAVE|G
-|root||mysql.infoschema|localhost|SELECT|G
-|root||root|&apos;&apos;|SELECT|G
-|root||mysql.session|localhost|SESSION_VARIABLES_ADMIN|G
-|root||root|&apos;&apos;|SHOW DATABASES|G
-|root||root|&apos;&apos;|SHOW VIEW|G
-|root||mysql.session|localhost|SHUTDOWN|G
-|root||root|&apos;&apos;|SHUTDOWN|G
-|root||mysql.session|localhost|SUPER|G
-|root||root|&apos;&apos;|SUPER|G
-|root||mysql.infoschema|localhost|SYSTEM_USER|G
-|root||mysql.session|localhost|SYSTEM_USER|G
-|root||mysql.sys|localhost|SYSTEM_USER|G
-|root||mysql.session|localhost|SYSTEM_VARIABLES_ADMIN|G
-|root||root|&apos;&apos;|TRIGGER|G
-|root||root|&apos;&apos;|UPDATE|G
-|root||root|&apos;&apos;|grant option|G
-performance_schema|schema||mysql.session|localhost|SELECT|G
-sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
-      <ServerVersion>8.0.27</ServerVersion>
-    </root>
+    <root id="1"/>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
     </collation>
