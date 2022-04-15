@@ -1,2 +1,3 @@
 /hasRedis/target/
 /Basic_noRedis/target/
+/hasRedis/src/main/resources/application-psd.yml
