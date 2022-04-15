@@ -1,7 +1,0 @@
-# mysql数据源
-# Path: src/main/resources/application-mysql.yml
-spring:
-  datasource:
-    password: 321321
-  redis:
-    password: 321321
