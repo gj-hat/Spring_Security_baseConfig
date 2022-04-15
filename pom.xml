@@ -8,6 +8,10 @@
         <version>2.6.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+    <modules>
+        <module>hasRedis</module>
+        <module>Basic_noRedis</module>
+    </modules>
     <groupId>com.example</groupId>
     <artifactId>Spring_Security_Study</artifactId>
     <version>0.0.1-SNAPSHOT</version>

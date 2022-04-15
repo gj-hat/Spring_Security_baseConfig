@@ -3,3 +3,4 @@
 spring:
   profiles:
     active: server
+#    active: mac14

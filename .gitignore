@@ -5,4 +5,4 @@
 /.idea
 /.mvn
 /target
-/hasRedis/src/main/resources/application-psd.yml
+/hasRedis/src/main/resources/application-server.yml
