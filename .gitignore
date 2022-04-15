@@ -1,3 +1,17 @@
 /hasRedis/target/
 /Basic_noRedis/target/
 /hasRedis/src/main/resources/application-psd.yml
+/.idea
+/.mvn
+/target
+/node_modules
+/npm-debug.log
+/yarn-error.log
+/yarn-debug.log
+/yarn-debug.log.tgz
+/yarn-error.log.tgz
+/yarn-debug.log.zip
+/yarn-error.log.zip
+/yarn-debug.log.tar.gz
+/yarn-error.log.tar.gz
+
