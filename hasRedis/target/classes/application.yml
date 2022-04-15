@@ -1,5 +1,0 @@
-# mysql数据源
-# Path: src/main/resources/application-mysql.yml
-spring:
-  profiles:
-    active: server
