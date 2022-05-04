@@ -1,4 +1,4 @@
-package com.study.web.service;
+package com.security.study.web.service;
 
 public interface UserService {
 

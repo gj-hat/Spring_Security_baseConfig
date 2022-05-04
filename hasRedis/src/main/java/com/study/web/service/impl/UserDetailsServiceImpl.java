@@ -1,19 +1,16 @@
 package com.study.web.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.study.web.entity.LoginUser;
+import com.baomidou.mybatisplus.extension.service.additional.query.impl.LambdaQueryChainWrapper;
 import com.study.web.entity.UserDomain;
-import com.study.web.mapper.SysMenuMapper;
 import com.study.web.mapper.UserMapper;
+import com.study.web.entity.LoginUser;
+import com.study.web.mapper.SysMenuMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -27,39 +24,44 @@ import java.util.List;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-
     @Autowired
     private UserMapper userMapper;
-
 
     @Autowired
     private SysMenuMapper sysMenuMapper;
 
-    /**
-     *  根据流程图
-     *  DaoAuthenticationProvider会自动调用 loadUserByUsername 方法查询用户名和密码  还有权限等的信息 是否匹配
+    /*
+     * 这个方法
+     * 只查询用户名是否存在  由SpringSecurity自动调用 方法将用户信息封装到UserDetails中 进行下一步用户名密码认证
+     *
+     * 根据流程图
+     * DaoAuthenticationProvider会自动调用 loadUserByUsername 方法查询用户名和密码  还有权限等的信息 是否匹配
+     *
+     *
+     *
+     *
      *
      */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        // 查询用户信息
-        LambdaQueryWrapper<UserDomain> user = new LambdaQueryWrapper<>();
-        user.eq(UserDomain::getUserName, username);
-        UserDomain userDomain = userMapper.selectOne(user);
+        //  根据用户名  查询用户名密码等信息
+        UserDomain userDomain =
+                new LambdaQueryChainWrapper<>(userMapper)
+                .eq(UserDomain::getUserName, username)
+                .one();
+
         // 如果没有查询到用户 抛出异常
         if (userDomain == null) {
-            throw new UsernameNotFoundException("用户名或者密码错误");
+            throw new UsernameNotFoundException("根据用户名没有查到用户");
         }
 
 
-        // 查询用户的角色 信息
-        List<String> userId = sysMenuMapper.selectPermsByUserId(userDomain.getId());
-
-
+        // 多表查询用户的权限 信息
+        List<String> userPerms = sysMenuMapper.selectPermsByUserId(userDomain.getId());
 
 
         // 数据封装为UserDetails
-        return new LoginUser(userDomain,userId);
+        return new LoginUser(userDomain, userPerms);
     }
 }

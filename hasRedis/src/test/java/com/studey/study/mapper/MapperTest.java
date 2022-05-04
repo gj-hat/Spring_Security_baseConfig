@@ -1,11 +1,10 @@
-package com.study.mapper;
+package com.studey.study.mapper;
 
 import com.study.web.entity.UserDomain;
 import com.study.web.mapper.SysMenuMapper;
 import com.study.web.mapper.UserMapper;
 import com.study.web.service.impl.UserServiceImpl;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestClassOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

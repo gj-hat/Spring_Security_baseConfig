@@ -4,7 +4,9 @@ import com.study.web.entity.UserDomain;
 import com.study.web.entity.dto.ResponseResult;
 import com.study.web.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,6 +31,7 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public ResponseResult hello() {
+
         return new ResponseResult(200,"hello world");
 
     }
@@ -69,6 +72,12 @@ public class HelloController {
         return new ResponseResult(200, "这是自定义权限的");
     }
 
+
+
+    @GetMapping("/noauth")
+    public ResponseResult noauth() {
+        return new ResponseResult(200, "不需要权限就可以访问");
+    }
 
 
     //    findAll

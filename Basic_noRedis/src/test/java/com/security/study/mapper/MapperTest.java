@@ -1,8 +1,8 @@
-package com.study.mapper;
+package com.security.study.mapper;
 
-import com.study.web.entity.UserDomain;
-import com.study.web.mapper.UserMapper;
-import com.study.web.service.impl.UserServiceImpl;
+import com.security.study.web.entity.UserDomain;
+import com.security.study.web.mapper.UserMapper;
+import com.security.study.web.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.junit.jupiter.api.Test;

@@ -1,14 +1,12 @@
 package com.study.web.entity;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -25,11 +23,11 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 public class LoginUser implements UserDetails {
 
-    /**
+
+    /*
      * 根据流程图
      * DaoAuthenticationProvider会自动调用 loadUserByUsername 方法查询用户名和密码  还有权限等的信息
      */
-
 
     private UserDomain userDomain;
 
@@ -40,14 +38,18 @@ public class LoginUser implements UserDetails {
         this.permissions = permissions;
     }
 
-    // 写成成员变量的形式 只在第一次的时候调用 查询用户的权限   后面就不用调用了
-    // 序列化的时候 忽略  因为spring的规定  SimpleGrantedAuthority类型序列化的时候会报错
+
+    /*
+     * 写成成员变量的形式 只在第一次的时候调用 查询用户的权限   后面就不用调用了
+     * 序列化的时候 忽略  因为spring的规定  SimpleGrantedAuthority类型序列化的时候会报错
+     */
     @JSONField(serialize = false)
     private List<SimpleGrantedAuthority> authorities;
 
     // 获取权限信息
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        // authorities不为空 说明之前已经有过查询了  不需要再查询
         if (authorities != null) {
             return authorities;
         }
@@ -96,20 +98,17 @@ public class LoginUser implements UserDetails {
     @Override
     public boolean isAccountNonLocked() {
         return true;
-
     }
 
     // 是否没有超时
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
-
     }
 
     // 用户是否可用
     @Override
     public boolean isEnabled() {
         return true;
-
     }
 }

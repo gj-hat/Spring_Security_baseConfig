@@ -1,7 +1,7 @@
-package com.study.web.mapper;
+package com.security.study.web.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.study.web.entity.UserDomain;
+import com.security.study.web.entity.UserDomain;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

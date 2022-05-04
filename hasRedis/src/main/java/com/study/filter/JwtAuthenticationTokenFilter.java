@@ -20,6 +20,14 @@ import java.io.IOException;
 import java.util.Objects;
 
 // 过滤器
+
+/**
+ * @Description:  这是jwt的过滤器 所有的请求会请过这里 然后判断token是否合法
+ * @date 2022年04月18日
+ * @author JiaGuo
+ */
+
+// 这是Spring提供的一个过滤器  目的让请求过来的时候 只进入一次过滤器
 @Component
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 

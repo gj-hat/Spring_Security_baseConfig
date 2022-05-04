@@ -1,4 +1,4 @@
-package com.study.web.entity;
+package com.security.study.web.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.study.web.entity;
+package com.security.study.web.entity;
 
 
 import com.baomidou.mybatisplus.annotation.TableId;

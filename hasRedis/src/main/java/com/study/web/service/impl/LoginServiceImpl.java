@@ -8,7 +8,6 @@ import com.study.web.entity.UserDomain;
 import com.study.web.entity.dto.ResponseResult;
 import com.study.web.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -22,7 +21,7 @@ import java.util.Map;
  * @author ：JiaGuo
  * @emil ：1520047927@qq.com
  * @date ：Created in 2022/4/8 15:31
- * @description：
+ * @description： 登录服务实现类
  * @modified By：
  * @version: 1.0
  */
@@ -54,17 +53,17 @@ public class LoginServiceImpl implements LoginService {
         }
 
         // 认证成功，使用userid生成一个jwt
-        LoginUser principal = (LoginUser) authenticate.getPrincipal();
-        String id = principal.getUserDomain().getId().toString();
+        LoginUser loginUser = (LoginUser) authenticate.getPrincipal();
+        String id = loginUser.getUserDomain().getId().toString();
         String jwt = JwtUtil.createJWT(id);
 
         Map<String, String> map = new HashMap<>();
         map.put("token", jwt);
 
         // 把完整的用户信息存入redis中 userid作为key
-        redisCache.setCacheObject("login:" + id, principal);
-        LoginUser cacheMap = redisCache.getCacheObject("login:" + id);
-        System.out.println(cacheMap);
+        redisCache.setCacheObject("login:" + id, loginUser);
+//        LoginUser cacheMap = redisCache.getCacheObject("login:" + id);
+//        System.out.println(cacheMap);
 
 
         return new ResponseResult(200, "登录成功", map);

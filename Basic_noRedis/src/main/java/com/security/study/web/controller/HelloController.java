@@ -1,7 +1,7 @@
-package com.study.web.controller;
+package com.security.study.web.controller;
 
-import com.study.web.entity.UserDomain;
-import com.study.web.service.impl.UserServiceImpl;
+import com.security.study.web.entity.UserDomain;
+import com.security.study.web.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

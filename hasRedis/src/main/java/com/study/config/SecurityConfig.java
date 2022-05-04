@@ -13,13 +13,14 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.DefaultSecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
  * @author ：JiaGuo
  * {@code @emil} ：1520047927@qq.com
  * {@code @date} ：Created in 2022/4/8 14:17
- * {@code @description：密码验证} 配置类
+ * {@code @description：密码验证 配置类
  * {@code @modified} By：
  * {@code @version:} 1.0
  */
@@ -37,11 +38,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private AccessDeniedHandlerImpl accessDeniedHandler;
 
 
-
-
     @Bean
     /*
-      SpringSecurity默认自动使用BCryptPasswordEncoder对密码进行加密，
+      将默认的PasswordEncoder密码加密方式改为BCryptPasswordEncoder对密码进行加密，
      */
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -51,6 +50,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     // configure()配置放行
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
+
+
         // 登录页面放行 不拦截
         http
                 // 关闭csrf防护     csrf是一个攻击  可以去百度了解
@@ -61,6 +63,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 // 对于登录接口 允许匿名访问   只有匿名时候才可以访问 /user/login
                 .antMatchers("/user/login").anonymous()
+                .antMatchers("/noauth").permitAll()
                 // 基于配置类的权限控制
                 .antMatchers("/hello3").hasAuthority("system:dept:list")
                 //  其他接口需要认证
